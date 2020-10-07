@@ -1,5 +1,5 @@
 # simulation-schema
-The json schema for the simulation factory
+The json schema for the simulation factory. This is intended to be used as a submodule.
 
 ## Usage
 A Schema object has two static methods that you need to know:

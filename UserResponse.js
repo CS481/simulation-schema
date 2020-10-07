@@ -1,4 +1,4 @@
-import Schema from "../schema/Schema"
+import Schema from "./Schema";
 export default class UserResponse extends Schema {
     static schema = {
         $id: "UserResponse",

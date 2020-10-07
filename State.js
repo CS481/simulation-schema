@@ -1,4 +1,4 @@
-import Schema from "../schema/Schema";
+import Schema from "./Schema";
 
 // Schema that represents the simulation's state
 export default class State extends Schema {
