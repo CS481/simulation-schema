@@ -1,7 +1,7 @@
 {
     "$id": "State",
     "type": "object",
-    "required": ["is_user_waiting"],
+    "required": ["user_waiting"],
     "properties": {
         "turn_number": {
             "type": "number",

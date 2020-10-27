@@ -1,12 +1,10 @@
 {
     "$id": "UserResponse",
     "type": "object",
-    "required": ["instance", "response"],
+    "required": ["user", "response", "simulation_id"],
     "properties": {
-        "instance": {"$ref": "SimulationInstance"},
-        "response": {
-            "type": "number",
-            "minimum": 0
-        }
+        "user": {"$ref": "User"},
+        "response": {"type": "string"},
+        "simulation_id": {"type": "string"}
     }
 }
