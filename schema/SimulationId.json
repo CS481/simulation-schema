@@ -1,0 +1,10 @@
+{
+    "$id": "SimulationId",
+    "type": "object",
+    "required": ["simulation_id"],
+    "properties": {
+        "simulation_id": {
+            "type": "string"
+        }
+    }
+}

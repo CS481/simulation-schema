@@ -3,11 +3,9 @@
     "type": "object",
     "required": ["instance_id", "user_id"],
     "properties": {
-        "instance_id": {
+        "simulation_id": {
             "type": "string"
         },
-        "user_id": {
-            "type": "string"
-        }
+        "user": {"$ref": "SimulationInstance"}
     }
 }
