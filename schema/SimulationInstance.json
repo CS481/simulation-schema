@@ -1,0 +1,11 @@
+{
+    "$id": "SimulationInstance",
+    "type": "object",
+    "required": ["simulation_id", "user"],
+    "properties": {
+        "simulation_id": {
+            "type": "string"
+        },
+        "user": {"$ref": "User"}
+    }
+}

@@ -11,10 +11,12 @@ export default class Schema {
         if(Validator.validate(this.schema, schemaObject)) {
             return schemaObject
         } else {
-            throw new Error(`JavaScript object failed validation against schema ${this.name}. Error: ${JSON.stringify(Validator.errors)}`);
+            throw new Error(`JavaScript object failed validation against schema ${this.name}.
+                             Error: ${JSON.stringify(Validator.errors)}.
+                             Object: ${JSON.stringify(schemaObject)}`);
         }    
     }
     static RegisterSchema() {
-        Validator.addSchema(this.schema, this.name);
+        Validator.addSchema(this.schema);
     }
 }
