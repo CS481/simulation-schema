@@ -1,0 +1,26 @@
+{
+    "$id": "FrameModification",
+    "type": "object",
+    "required": ["frame_id", "user"],
+    "properties": {
+        "user": {"$ref": "User"},
+        "frame_id": { "type": "string" },
+        "prompt": { "type": "string" },
+        "responses": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string"}
+        },
+        "rounds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "number"}
+        },
+        "effects": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"$ref": "Effect"}
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+    "$id": "SimulationModification",
+    "type": "object",
+    "required": ["simulation_id", "user"],
+    "properties": {
+        "user": {"$ref": "User"},
+        "simulation_id": { "type": "string" },
+        "name": { "type": "string" },
+        "response_timeout": {
+            "type": "number",
+            "minimum": 0
+        },
+        "resources": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {"type": "number"}
+            }
+        }
+    },
+    "additionalProperties": false
+}
