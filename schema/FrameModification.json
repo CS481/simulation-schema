@@ -6,6 +6,7 @@
         "user": {"$ref": "User"},
         "frame_id": { "type": "string" },
         "prompt": { "type": "string" },
+        "default_action": { "type": "string" },
         "responses": {
             "type": "array",
             "uniqueItems": true,
