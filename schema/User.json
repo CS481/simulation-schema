@@ -9,5 +9,6 @@
         "password": {
             "type": "string"
         }
-    }
+    },
+    "additionalProperties": false
 }

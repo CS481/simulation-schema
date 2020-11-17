@@ -39,5 +39,6 @@
         "user_waiting": {
             "type": "boolean"
         }
-    }
+    },
+    "additionalProperties": false
 }

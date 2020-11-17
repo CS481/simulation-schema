@@ -1,5 +1,5 @@
 {
-    "$id": "SimulationInstance",
+    "$id": "IdRequest",
     "type": "object",
     "required": ["simulation_id", "user"],
     "properties": {
@@ -7,5 +7,6 @@
             "type": "string"
         },
         "user": {"$ref": "User"}
-    }
+    },
+    "additionalProperties": false
 }
