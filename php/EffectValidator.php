@@ -10,14 +10,9 @@ use JsonSchema\Constraints\Constraint;
 // Accept Input and print it
 $data = json_decode(file_get_contents('php://input'));
 
-$path = file_get_contents(__DIR__ . '/../schema/UserResponse.json');
-
-//add correct (relative?) path for comparison Shcema
+// Add correct path for comparison Schema
+$path = file_get_contents(__DIR__ . '/../schema/Effect.json');
 $JSONFile = json_decode($path);
-
-//add correct (relative?) path for comparison Shcema refs (usually User)
-$JSONFile-> properties->user->{'$ref'} = 'file://'.__DIR__.'/../schema/User.json';
-
 
 // Create new Validator obj and validate $data against the schema ($JSONFile)
 $validator = new Validator();
@@ -32,5 +27,3 @@ if ($validator->isValid()) {
     }
 }
 ?>
-
-
