@@ -10,7 +10,7 @@ use JsonSchema\Constraints\Constraint;
 $data = json_decode(file_get_contents('php://input'));
 
 // Add correct path for comparison Schema
-$path = file_get_contents(__DIR__ . '/../schema/FrameModification.json');
+$path = file_get_contents(__DIR__ . '/../schema/SimulationModification.json');
 $JSONFile = json_decode($path);
 
 // Correct the referenced User Property
@@ -21,11 +21,9 @@ $validator = new Validator();
 $validator->validate($data, $JSONFile); // validates!
 
 if ($validator->isValid()) {
-    echo "The supplied JSON validates against the schema.\n";
+    	//cannot include the echop as the PHP sees this as a return type	
+	//echo "The supplied JSON validates against the schema.\n";
 } else {
-    echo "JSON does not validate. Violations:\n";
-    foreach ($validator->getErrors() as $error) {
-        printf("[%s] %s\n", $error['property'], $error['message']);
-    }
+	throw new Exception("JSON does not validate.\n");
 }
 ?>

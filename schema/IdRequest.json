@@ -1,9 +1,9 @@
 {
     "$id": "IdRequest",
     "type": "object",
-    "required": ["simulation_id", "user"],
+    "required": ["id", "user"],
     "properties": {
-        "simulation_id": {
+        "id": {
             "type": "string"
         },
         "user": {"$ref": "User"}
