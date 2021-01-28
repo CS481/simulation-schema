@@ -1,4 +1,4 @@
-import Validator from "./Validator";
+import Validator from "./Validator.js";
 
 // Base class for all schemas
 export default class Schema {

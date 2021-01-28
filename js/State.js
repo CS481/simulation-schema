@@ -1,4 +1,4 @@
-import Schema from "../js/Schema";
+import Schema from "../js/Schema.js";
 import StateSchema from "../schema/State.json";
 
 // Schema that represents the simulation's state

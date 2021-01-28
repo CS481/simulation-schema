@@ -1,4 +1,4 @@
-import Schema from "../js/Schema";
+import Schema from "../js/Schema.js";
 import UserSchema from "../schema/User.json";
 
 // Schema that represents the user
