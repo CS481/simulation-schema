@@ -9,7 +9,7 @@ export default class Schema {
     }
     static Validate(schemaObject) {
         if(Validator.validate(this.schema, schemaObject)) {
-            return schemaObject
+            return schemaObject;
         } else {
             throw new Error(`JavaScript object failed validation against schema ${this.name}.
                              Error: ${JSON.stringify(Validator.errors)}.
