@@ -1,10 +1,10 @@
 {
     "$id": "FrameModification",
     "type": "object",
-    "required": ["frame_id", "user"],
+    "required": ["id", "user"],
     "properties": {
         "user": {"$ref": "User"},
-        "frame_id": { "type": "string" },
+        "id": { "type": "string" },
         "prompt": { "type": "string" },
         "default_action": { "type": "string" },
         "responses": {

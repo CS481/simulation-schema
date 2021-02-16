@@ -1,10 +1,10 @@
 {
     "$id": "SimulationModification",
     "type": "object",
-    "required": ["simulation_id", "user"],
+    "required": ["id", "user"],
     "properties": {
         "user": {"$ref": "User"},
-        "simulation_id": { "type": "string" },
+        "id": { "type": "string" },
         "name": { "type": "string" },
         "response_timeout": {
             "type": "number",
