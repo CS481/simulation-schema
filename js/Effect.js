@@ -1,4 +1,4 @@
-import Schema from "./Schema";
+import Schema from "./Schema.js";
 import EffectSchema from "../schema/Effect.json";
 
 export default class Effect extends Schema {

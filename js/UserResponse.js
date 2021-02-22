@@ -1,4 +1,4 @@
-import Schema from "../js/Schema";
+import Schema from "../js/Schema.js";
 import UserResponseSchema from "../schema/UserResponse.json";
 
 // Imports for side-effects

@@ -1,4 +1,4 @@
-import Schema from "./Schema";
+import Schema from "./Schema.js";
 import IdResponseSchema from "../schema/IdResponse.json";
 
 export default class IdResponse extends Schema {
