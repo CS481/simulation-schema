@@ -1,7 +1,8 @@
 {
     "$id": "State",
     "type": "object",
-    "required": ["user_waiting"],
+    "additionalProperties": false,
+    "required": ["user_waiting", "turn_number", "response_deadline", "history", "prompt", "responses"],
     "properties": {
         "turn_number": {
             "type": "number",
@@ -11,34 +12,19 @@
             "type": "string",
             "format": "date-time"
         },
-        "resources": {
-            "type": "object",
-            "patternProperties": {
-                "^.*$": {"type": "number"}
-            }
+        "prompt": {
+            "type": "string"
         },
-        "resource_deltas": {
-            "type": "object",
-            "patternProperties": {
-                "^.*$": {"type": "number"}
-            }
-        },
-        "active_frame": {
-            "type": "object",
-            "required":["prompt", "responses"],
-            "properties": {
-                "prompt": {
-                    "type": "string"
-                },
-                "responses": {
-                    "type": "array",
-                    "items": {"type" : "string"}
-                }
-            }
+        "responses": {
+            "type": "array",
+            "items": {"type" : "string"}
         },
         "user_waiting": {
             "type": "boolean"
+        },
+        "history": {
+            "type": "array",
+            "items": {"$ref": "StateHistory"}
         }
-    },
-    "additionalProperties": false
+    }
 }
