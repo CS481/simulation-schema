@@ -26,24 +26,30 @@
       "minimum": 0
     },
     "resources": {
-      "type": "object",
-      "properties": {
-        "name": { "type": "string" },
-        "equation": { "type": "string" },
-        "starting_value": {
-          "type": "number",
-          "minimum": 0
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "equation": { "type": "string" },
+          "starting_value": {
+            "type": "number",
+            "minimum": 0
+          }
         }
       }
     },
     "user_resources": {
-      "type": "object",
-      "properties": {
-        "name": { "type": "string" },
-        "equation": { "type": "string" },
-        "starting_value": {
-          "type": "number",
-          "minimum": 0
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "equation": { "type": "string" },
+          "starting_value": {
+            "type": "number",
+            "minimum": 0
+          }
         }
       }
     }
