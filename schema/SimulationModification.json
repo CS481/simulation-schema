@@ -10,8 +10,8 @@
       "type": "number",
       "minimum": 0
     },
-    "start_text": { "type": "string"},
-    "end_text": { "type": "string"},
+    "start_text": { "type": "string" },
+    "end_text": { "type": "string" },
     "prompt": { "type": "string" },
     "responses": { "$ref": "Responses" },
     "round_count": {
@@ -26,6 +26,7 @@
       "type": "array",
       "items": {
         "type": "object",
+        "required": ["name", "equation", "starting_value"],
         "properties": {
           "name": { "type": "string" },
           "equation": { "type": "string" },
@@ -40,6 +41,7 @@
       "type": "array",
       "items": {
         "type": "object",
+        "required": ["name", "equation", "starting_value"],
         "properties": {
           "name": { "type": "string" },
           "equation": { "type": "string" },
