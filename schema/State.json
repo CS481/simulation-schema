@@ -15,10 +15,7 @@
         "prompt": {
             "type": "string"
         },
-        "responses": {
-            "type": "array",
-            "items": {"type" : "string"}
-        },
+        "responses": { "$ref": "Responses" },
         "user_waiting": {
             "type": "boolean"
         },
