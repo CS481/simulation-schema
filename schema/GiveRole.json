@@ -1,7 +1,7 @@
 {
   "$id": "GiveRole",
   "type": "object",
-  "required": [ "user", "Role" ],
+  "required": [ "user", "role" ],
   "properties": {
     "user": { "$ref": "User" },
     "role": {
