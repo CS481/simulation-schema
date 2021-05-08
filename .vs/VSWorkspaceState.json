@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\js",
+    "\\php",
     "\\schema"
   ],
-  "SelectedNode": "\\schema\\SimulationModification.json",
+  "SelectedNode": "\\js\\User.js",
   "PreviewInSolutionExplorer": false
 }
