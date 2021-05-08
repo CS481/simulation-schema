@@ -4,10 +4,7 @@
   "required": [ "user", "Role" ],
   "properties": {
     "user": { "$ref": "User" },
-    "Role": {
-      "type": "string",
-      "minLength": 1
-    }
+    "Role": { "type": "string" }
   },
   "additionalProperties": false
 }
