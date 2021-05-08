@@ -1,6 +1,6 @@
 {
   "$id": "AllSims",
-  "type": "object",
+  "type": "array",
   "required": [ "id", "name" ],
   "properties": {
     "id": { "type": "string" },
