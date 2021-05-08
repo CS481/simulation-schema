@@ -1,22 +1,18 @@
 {
-  "$id": "User",
-  "type": "object",
-  "required": [ "username", "password", "Role" ],
-  "properties": {
-    "username": {
-      "type": "string",
-      "minLength": 1
+    "$id": "User",
+    "type": "object",
+    "required": ["username", "password"],
+    "properties": {
+        "username": {
+            "type": "string",
+            "minLength": 1
+        },
+        "password": {
+            "type": "string",
+            "pattern": "(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])",
+            "maxlength": 72,
+            "minLength": 6
+        }
     },
-    "password": {
-      "type": "string",
-      "pattern": "(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])",
-      "maxlength": 72,
-      "minLength": 6
-    },
-    "Role": {
-      "type": "string",
-      "minLength": 1
-    }
-  },
-  "additionalProperties": false
+    "additionalProperties": false
 }
