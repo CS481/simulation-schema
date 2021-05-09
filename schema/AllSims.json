@@ -1,0 +1,9 @@
+{
+  "$id": "AllSims",
+  "type": "object",
+  "required": ["user" ],
+  "properties": {
+    "user": { "$ref": "User" }
+  },
+  "additionalProperties": false
+}

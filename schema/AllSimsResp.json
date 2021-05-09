@@ -1,0 +1,83 @@
+{
+  "$id": "AllSimsResp",
+  "type": "array",
+  "additionalProperties": false,
+  "required": [ "name" ],
+  "properties": {
+    "tablename": { "tablename": "string" },
+    "name": { "type": "string" },
+    "facilitator": { "type": "string" },
+    "response_timeout": {
+      "type": "number",
+      "minimum": 0
+    },
+    "prompt": { "type": "string" },
+    "responses": {
+      "type": "object",
+      "required": [ "response_type", "values" ],
+      "properties": {
+        "response_type": {
+          "enum": [ "radio", "slider" ]
+        },
+        "values": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": { "type": "number" }
+            },
+            {
+              "type": "object",
+              "required": [ "min_response", "max_response", "step_response" ],
+              "properties": {
+                "min_response": { "type": "number" },
+                "max_response": { "type": "number" },
+                "step_response": { "type": "number" }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "round_count": {
+      "type": "number",
+      "minimum": 0
+    },
+    "user_count": {
+      "type": "number",
+      "minimum": 0
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "name", "equation", "starting_value" ],
+        "properties": {
+          "name": { "type": "string" },
+          "equation": { "type": "string" },
+          "starting_value": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "user_resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "name", "equation", "starting_value" ],
+        "properties": {
+          "name": { "type": "string" },
+          "equation": { "type": "string" },
+          "starting_value": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+
+      }
+    },
+    "start_text": { "type": "string" },
+    "end_text": { "type": "string" }
+  }
+}
