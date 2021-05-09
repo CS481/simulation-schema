@@ -1,0 +1,10 @@
+{
+    "$id": "AccountCreation",
+    "type": "object",
+    "required": ["new_user", "auth_user"],
+    "properties": {
+        "new_user": {"$ref": "User"},
+        "auth_user": {"$ref": "User"}
+    },
+    "additionalProperties": false
+}
